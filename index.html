@@ -13,8 +13,9 @@
             <!-- <p class="header--p" style=" margin-left: 20px;">ЧистиКО</p> -->
             <a class="header--p" style=" margin-left: 20px; text-decoration: none;" href="index.html">ЧистиКО</a>
             <div class="link-bar">
-                <a class="header--a" href="#usl">Услуги</a>
-                <a class="header--a" href="contacts.html">Контакты</a>
+                <a class="header--a" id="index">Главная</a>
+                <a class="header--a" id="uslugi">Услуги</a>
+                <a class="header--a" id="contacts">Контакты</a>
                 <!-- <a class="header--a" href="#">Рыба сюда</a>
                 <a class="header--a" href="#">О рыбе</a> -->
             </div>
@@ -27,7 +28,7 @@
             <!-- <div class="body--container" style="background-image: url(img/bg.png); background-repeat: no-repeat; background-size: contain; background-position: center;"> -->
                 <p class="body--h">ЧистиКО</p>
                 <p class="body--c">Профессиональна уборка и обработка квартир, домов и офисных помещений</p>
-                <button style="width: 80%; max-width: 300px;" onclick='window.location.href = "#of"'>Заказать уборку</button>
+                <button style="width: 80%; max-width: 300px; cursor: pointer;" id="uslugi1">Заказать уборку</button>
             </div>
             <div>
                 <img src="img/logo.png" class="img--main">
@@ -40,32 +41,31 @@
             <div class="card border-1">
                 <p class="card-head">Уборка помещений</p>
                 <p class="card-text">От маленьких квартир до больших коттеджей, от небольшой до генеральной уборки</p>
+                <p class="card-price">от 1000 руб.</p>
                 <!-- <button class="button" href="#">Рыба туда</button> -->
             </div>
 
             <div class="card border-1">
                 <p class="card-head">Мойка окон</p>
                 <p class="card-text">Отмоем всё - и окна после ремонта не проблема</p>
+                <p class="card-price">от 1000 руб.</p>
             </div>
 
             <div class="card border-1">
-                <p class="card-head">Обработка помещений</p>
+                <p class="card-head" style="font-size: 27px;">Обработка помещений</p>
                 <p class="card-text">Обработка от насекомых, устранение неприятных запахов</p>
+                <p class="card-price">от 1000 руб.</p>
             </div>
         </div>
         
         <p class="btw-h" id="of">Закажите уборку</p>
 
         <div class="order-form">
-            <div>
-                <img src="img/order.png" class="img--main">
-            </div>
-            <div style="margin-left: 0px;" class="input-container">
-                <form method="post" id="formord">
-                    <input type="text" id="i1" placeholder="Ваше имя">
-                    <input type="number" id="i2" placeholder="Номер телефона">
-                    <button style="width: 80%; max-width: 300px;">Заказать уборку</button>
-                </form>
+            <img src="img/order.png" class="img--main">
+            <div class="input-container">
+                <input type="text" id="i1" placeholder="Ваше имя">
+                <input type="tel" id="i2" placeholder="Номер телефона">
+                <input type="submit" id="call" value="Заказать">
             </div>
         </div>
 
@@ -106,4 +106,24 @@
         <p style="font-size: 30px">ЧистиКО</p>
     </footer>
 </body>
+<script>
+    function scroll() {
+        document.getElementById("of").scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        });
+    }
+
+    document.getElementById("uslugi").addEventListener("click", scroll);
+    document.getElementById("uslugi1").addEventListener("click", scroll);
+    document.getElementById("contacts").addEventListener("click", () => {
+        window.location.href = "contacts.html";
+    });
+
+    document.getElementById("call").addEventListener("click", () => {
+        const name = document.getElementById("i1").value;
+        const phone = document.getElementById("i2").value;
+
+    });
+</script>
 </html>

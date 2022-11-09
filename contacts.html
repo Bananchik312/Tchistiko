@@ -11,9 +11,11 @@
     <div class="headback">
         <header style="max-width: 1200px;">
             <!-- <p class="header--p" style=" margin-left: 20px;">ЧистиКО</p> -->
-            <a class="header--p" style=" margin-left: 20px; text-decoration: none;" href="index.html">ЧистиКО</a>
+            <a class="header--p" style=" margin-left: 20px; text-decoration: none;">ЧистиКО</a>
             <div class="link-bar">
-                <a class="header--a" href="#">Контакты</a>
+                <a class="header--a" id="index">Главная</a>
+                <a class="header--a" id="uslugi">Услуги</a>
+                <a class="header--a" id="contacts">Контакты</a>
                 <!-- <a class="header--a" href="#">Рыба сюда</a>
                 <a class="header--a" href="#">О рыбе</a> -->
             </div>
@@ -24,7 +26,7 @@
         <div class="body--main">
             <div class="body--container">
                 <p class="body--m" style="margin-bottom: 20px;">Наши контакты:</p>
-                <p class="body--u">Телефон: +7(800)555-35-35<br>Адрес: Околобабайкина, 13</p>
+                <p class="body--u" style="font-size: 22px"><b>Телефон:</b> +7 (800) 555-35-35<br><b>Адрес:</b> г. Екатеринбург, ул. Фурманова, д. 124, офис</p>
             </div>
             <div>
                 <img src="img/logo.png" class="img--main">
@@ -32,4 +34,12 @@
         </div>
     </div>
 </body>
+<script>
+    document.getElementById("index").addEventListener("click", function(){
+        window.location.href = "index.html";
+    });
+    document.getElementById("uslugi").addEventListener("click", function(){
+        window.location.href = "index.html#usl";
+    });
+</script>
 </html>
