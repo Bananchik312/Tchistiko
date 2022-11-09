@@ -1,0 +1,326 @@
+body{margin: 0px;}
+*{margin: 0; font-family: "Rubik";}
+a{color: black;}
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: auto;
+    padding: 20px 40px 10px 40px;
+}
+
+hr{
+    max-width: min(90vw,1300px);
+    margin: auto;
+    text-align: center;
+    border-color: #1B4B88;
+    background-color: #1B4B88;
+}
+
+.details-container hr{
+    border-color: #A1BFCD;
+    background-color: #A1BFCD;
+}
+
+.headback{
+    /* background-color: rgb(255, 255, 255); */
+    padding-bottom: 15px;
+    color: rgb(0, 0, 0);
+}
+
+.border-1{
+    border: 1px solid black;
+    border-color: black;
+}
+
+.block{
+    max-width: 1200px;
+    margin: auto;
+    padding: 0px 40px;
+}
+
+.button{
+    border: 1px solid black;
+    background-color: white;
+    border-radius: 0px;
+    font-size: 20px;
+    margin-top: 60px;
+}
+
+.button:hover{
+    color: white;
+    background-color: black;
+}
+
+.card-container{
+    margin-bottom: 20px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    /* background-color: #cddee6; */
+    padding: 10px;
+    /* border-radius: 10px; */
+    /* width: 100vw; */
+}
+
+.card{
+    margin: 10px;
+    max-width: 300px;
+    width: 100%;
+    height: 200px;
+    text-align: center;
+    padding: 25px;
+    /* box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.5); */
+    border-radius: 10px;
+    /* border-color: #1B4B88; */
+    border-color: #A1BFCD;
+    border-width: 3px;
+    /* border-width: 0px; */
+    background-color: white;
+}
+
+.card-head{
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: #102a4f;
+}
+
+.card-text{
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #09182e;
+}
+
+.details-container{
+    border: solid;
+    width: 80%;
+    border-radius: 10px;
+    border-color: #A1BFCD;
+    border-width: 3px;
+    padding: 8px;
+    margin: auto;
+    font-size: 20px;
+    font-weight: lighter;
+}
+
+details{
+    margin: 8px 0px;
+}
+
+details div{
+    padding: 15px 25px;
+}
+
+summary{
+    color: #102a4f;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+}
+
+.link-bar{
+    display: flex;
+    flex-direction: row;
+}
+
+.img--main{
+    max-width: 400px;
+    width: 30vw;
+    /* padding-top: 18vh; */
+}
+
+button{
+    background-color: #1b8868;
+    color: white;
+    border-radius: 15px;
+    font-size: 20px;
+    padding: 10px 20px;
+    margin: 10px 50px;
+    border-width: 2px;
+    border-color: #1b8868;
+    border: solid;
+
+    transition: all 0.2s ease-out;
+}
+
+button:hover{
+    background-color: white;
+    color: #1b8868;
+}
+
+.order-form{
+    /* border-radius: 15px;
+    border-width: 2px;
+    border: solid;
+    border-color: #A1BFCD; */
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+input{
+    padding: 5px;
+    border: solid;
+    border-width: 2px;
+    border-color: #A1BFCD;
+    border-radius: 3px;
+    font-size: 20px;
+    outline: none;
+    border-radius: 10px;
+    margin: 5px;
+}
+
+.input-container{
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+input:focus{
+    border-width: 2px;
+    border-color: #1b8868;
+}
+
+.body--main{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 70vh;
+}
+
+.body--container{
+    /* padding-top: -48vh; */
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+}
+
+.btw-h{
+    text-align: center;
+    font-size: 40px;
+    margin: 20px 0px 10px 0px;
+    color:#102a4f;
+}
+
+.body--c{
+    max-width: 550px;
+    font-size: 30px;
+    margin: 20px 0px 30px 0px;
+    color:#102a4f;
+}
+.body--u{
+    max-width: 550px;
+    font-size: 30px;
+    margin-bottom: 60px;
+    line-height: 200%;
+}
+.body--h{
+    font-size: 4rem;
+    margin-bottom: 0px;
+    color: #13345f;
+}
+.body--m{
+    font-size: 3rem;
+    margin-bottom: 0px;
+    color: rgb(31, 31, 82);
+}
+
+.header--p{
+    font-size: 30px;
+    margin: auto 0px auto 0px;
+    color:#1B4B88;
+    font-weight: 600;
+}
+
+.header--a{
+    /* padding-left: 20px; */
+    padding-right: 20px;
+    font-size: 20px;
+    margin: auto;
+    color: rgb(0, 0, 0);
+    /* text-decoration: none; */
+    color:#13345f;
+}
+
+.header--a:hover{
+    color: #8c00a8;
+}
+
+@media (max-width: 1200px){
+    .body--c{font-size: 30px;}
+    .body--u{font-size: 27px;}
+    .body--h{font-size: 45px;}
+    .body--m{font-size: 35px;}
+    .header--p{font-size: 35px;}
+}
+
+@media (max-width: 992px){
+    .body--c{font-size: 30px;}
+    .body--u{font-size: 25px;}
+    .body--h{font-size: 50px;}
+    .body--m{font-size: 40px;}
+    .header--p{font-size: 40px; padding-right: 15px}
+    .body--main{flex-direction: column;}
+    .img--main{padding: 0; width: 60vw;}
+    .body--main{height: 75vh; justify-content: flex-start; height: auto; padding-bottom: 30px;}
+    .body--main *{margin-top: 20px;}
+    .card-container{flex-direction: column; align-items: center;}
+    .order-form{flex-direction: column; align-items: center;}
+    button{margin: auto;}
+}
+
+@media (max-width: 767px){
+    .body--c{font-size: 25px;}
+    .body--u{font-size: 20px;}
+    .body--h{font-size: 40px;}
+    .body--m{font-size: 35px;}
+    .header--a{padding: 0px;}
+    .header--p{font-size: 30px; text-align: center;}
+    header{flex-direction: column; padding: 20px 20px 10px 20px;}
+    .link-bar{flex-direction: column;}
+    .header--a{margin-top: 10px;}
+}
+
+@media (max-width: 420px){
+    .body--c{font-size: 25px;}
+    .body--u{font-size: 20px;}
+    .body--h{font-size: 35px;}
+    .body--m{font-size: 30px;}
+    .header--p{font-size: 26px;}
+    header{flex-direction: column;}
+    .link-bar{flex-direction: column;}
+    .header--a{margin-top: 5px;}
+}
+
+@font-face {
+    font-family: "Main";
+    src: url(../fonts/Jost/Jost-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: "Nunito";
+    src: url("../fonts/Nunito-VariableFont_wght.ttf");
+}
+
+@font-face {
+    font-family: "Rubik";
+    src: url("../fonts/Rubik-VariableFont_wght.ttf");
+}
+
+@font-face {
+    font-family: "Fira";
+    src: url("../fonts/FiraSans-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Overpass";
+    src: url("../fonts/Overpass-VariableFont_wght.ttf");
+}
