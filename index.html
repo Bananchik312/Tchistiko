@@ -63,8 +63,8 @@
         <div class="order-form">
             <img src="img/order.png" class="img--main">
             <div class="input-container">
-                <input type="text" id="i1" placeholder="Ваше имя">
-                <input type="tel" id="i2" placeholder="Номер телефона">
+                <input type="text" id="i1" placeholder="Ваше имя" minlength="3">
+                <input type="tel" id="i2" placeholder="Номер телефона" pattern="\d+" minlength="11" maxlength="11">
                 <input type="submit" id="call" value="Заказать">
             </div>
         </div>
@@ -120,10 +120,65 @@
         window.location.href = "contacts.html";
     });
 
+    let blue = false;
+    let red = false;
+
     document.getElementById("call").addEventListener("click", () => {
         const name = document.getElementById("i1").value;
         const phone = document.getElementById("i2").value;
+        const token = "";
+        const uid = "";
+        if (name.length < 2 || phone.length < 10) return;
+        // send message via telegram bot api
+        fetch(`https://api.telegram.org/bot${token}/sendMessage?chat_id=${uid}&text=Имя: ${name}%0AТелефон: ${phone}`)
+            .then(response => response.json())
+            .then(data => {
+                if (data.ok) {
+                    // change button text
+                    document.getElementById("call").value = "Отправлено!";
+                    //change button color to blue
+                    document.getElementById("call").style.backgroundColor = "#1B4B88";
+                    document.getElementById("call").style.border = "2px solid #1B4B88";
+                    blue = true;
+                } else {
+                    // change button text
+                    document.getElementById("call").value = "Ошибка!";
+                    //change button color to red
+                    document.getElementById("call").style.backgroundColor = "#bd4e0d";
+                    document.getElementById("call").style.border = "2px solid #bd4e0d";
+                    red = true;
+                }
+                setTimeout(() => {
+                    document.getElementById("call").value = "Заказать";
+                    document.getElementById("call").style.backgroundColor = "#1b8868";
+                    document.getElementById("call").style.color = "white";
+                    document.getElementById("call").style.border = "2px solid #1b8868";
+                    blue = false;
+                    red = false;
+                }, 2000);
+            });
+    });
 
+    document.getElementById("call").addEventListener("mouseover", () => {
+        document.getElementById("call").style.backgroundColor = "white";
+        document.getElementById("call").style.color = "#1b8868";
+        document.getElementById("call").style.border = "2px solid #1b8868";
+    });
+
+    document.getElementById("call").addEventListener("mouseout", () => {
+        if (blue) {
+            document.getElementById("call").style.backgroundColor = "#1B4B88";
+            document.getElementById("call").style.color = "white";
+            document.getElementById("call").style.border = "2px solid #1B4B88";
+        } else if (red) {
+            document.getElementById("call").style.backgroundColor = "#bd4e0d";
+            document.getElementById("call").style.color = "white";
+            document.getElementById("call").style.border = "2px solid #bd4e0d";
+        } else {
+            document.getElementById("call").style.backgroundColor = "#1b8868";
+            document.getElementById("call").style.color = "white";
+            document.getElementById("call").style.border = "2px solid #1b8868";
+        }
     });
 </script>
 </html>

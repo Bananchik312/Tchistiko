@@ -168,6 +168,26 @@ button:hover {
     color: #1b8868;
 }
 
+input {
+    padding: 5px;
+    border: 2px solid #A1BFCD;
+    font-size: 20px;
+    outline: none;
+    border-radius: 10px;
+    margin: 5px;
+}
+
+.input-container {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+input:focus {
+    border-width: 2px;
+    border-color: #1b8868;
+}
+
 .order-form {
     /*border-radius: 15px;*/
     /*border-width: 2px;*/
@@ -184,6 +204,14 @@ button:hover {
 .order-form input[type="text"] input[type="tel"] {
     /*width: 100%;*/
     max-width: 50vw;
+}
+
+input:invalid:not(:placeholder-shown) {
+    border-color: #d75813;
+}
+
+input:valid:not(:placeholder-shown) {
+    border-color: #1b8868;
 }
 
 .order-form input[type="submit"] {
@@ -203,26 +231,6 @@ button:hover {
 .order-form input[type="submit"]:hover {
     background-color: white;
     color: #1b8868;
-}
-
-input {
-    padding: 5px;
-    border: 2px solid #A1BFCD;
-    font-size: 20px;
-    outline: none;
-    border-radius: 10px;
-    margin: 5px;
-}
-
-.input-container {
-    padding: 15px;
-    display: flex;
-    flex-direction: column;
-}
-
-input:focus {
-    border-width: 2px;
-    border-color: #1b8868;
 }
 
 .body--main {
